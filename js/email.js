@@ -16,9 +16,7 @@ const allowedEmails = ['carloeusebi@boolean.it',
 emailButton.addEventListener('click', function () {
 
     // clean old errors
-    emailElement.classList.remove('is-invalid');
-    emailError.style.display = 'none';
-    emailInvalid.classList.add('d-none');
+    clearErrors();
 
     // read user input
     const userEmail = emailElement.value.trim();
@@ -63,3 +61,9 @@ emailButton.addEventListener('click', function () {
     }
 
 })
+
+function clearErrors() {
+    emailElement.classList.remove('is-invalid');
+    emailError.style.display = 'none';
+    emailInvalid.classList.add('d-none');
+}

@@ -1,8 +1,3 @@
-//function to generate rnd numbers
-function rollDice() {
-    return Math.floor(Math.random() * 6 + 1);
-}
-
 const playButton = document.getElementById('play-button');
 const displayResult = document.getElementById('result-message');
 
@@ -13,11 +8,7 @@ const cpuDices = document.getElementsByClassName('cpu-dice');
 playButton.addEventListener('click', function () {
 
     //hide previous rolls
-    for (let i = 0; i < 6; i++) {
-        playerDices[i].style.display = 'none';
-        cpuDices[i].style.display = 'none';
-    }
-
+    hideDices();
 
     // throw dice for player and cpu
     const playerRoll = rollDice();
@@ -46,3 +37,16 @@ playButton.addEventListener('click', function () {
     console.log(message);
     console.log('--------------------------')
 })
+
+
+//function to generate rnd numbers
+function rollDice() {
+    return Math.floor(Math.random() * 6 + 1);
+}
+
+function hideDices() {
+    for (let i = 0; i < 6; i++) {
+        playerDices[i].style.display = 'none';
+        cpuDices[i].style.display = 'none';
+    }
+}
