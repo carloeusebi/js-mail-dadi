@@ -24,12 +24,12 @@
     <!-- Exercise made by
     CARLO EUSEBI -->
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-3 align-items-center my-5">
+        <div class="row row g-3 justify-content-center text-center align-items-center my-5">
             <!-- email input -->
-            <div class="col text-end px-5">
-                <label for="user-email" class="form-label text-end">Enter email</label>
+            <div class="col-12 col-md-2">
+                <label for="user-email" class="form-label">Enter email</label>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-6">
                 <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
                     <input type="email" class="form-control" id="user-email"
@@ -38,10 +38,19 @@
                 </div>
             </div>
             <!-- button -->
-            <div class="col px-5">
-                <button type="button" class="btn btn-primary" id="btn-email">Verifica</button>
+            <div class="col-12 col-md-2">
+                <button type="button" class="btn btn-primary" id="btn-email">Login</button>
+            </div>
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="d-none col-10 col-md-6 alert alert-danger alert-dismissible fade show"
+                id="not-authorized-alert">
+                <strong>Hoops!</strong> It looks like you are not authorized to play!!
+                <button type="button" class="btn-close" id="alert-button"></button>
             </div>
         </div>
+
     </div>
 </body>
 
