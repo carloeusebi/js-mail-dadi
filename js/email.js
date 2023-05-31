@@ -50,15 +50,17 @@ emailButton.addEventListener('click', function () {
     // console log the number of iterations for debug purposes
     console.log('Number of iterations: ' + numberOfIteration);
 
-    // if email address is allowed show the play button;
-    // otherwise show the 'not authorized' alert and hide the button if it was on display
     if (isAllowed) {
 
+        // if email address is allowed show the play button;
         diceGameSection.classList.remove('d-none');
 
     } else {
 
+        // hide the dice game in case it was on display
         diceGameSection.classList.add('d-none');
+
+        // otherwise show the 'not authorized' alert and 
         emailInvalid.classList.remove('d-none');
 
     }
@@ -66,6 +68,8 @@ emailButton.addEventListener('click', function () {
 })
 
 function clearErrors() {
+
+    // clear all errors
     emailElement.classList.remove('is-invalid');
     emailError.style.display = 'none';
     emailInvalid.classList.add('d-none');

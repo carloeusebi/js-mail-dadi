@@ -13,6 +13,7 @@ let cpuScore = 0;
 const playerDices = document.getElementsByClassName('player-dice');
 const cpuDices = document.getElementsByClassName('cpu-dice');
 
+
 // RESET BUTTON
 resetButton.addEventListener('click', function () {
 
@@ -22,7 +23,6 @@ resetButton.addEventListener('click', function () {
     playerScore = cpuScore = 0;
 
     printScores();
-
 
 })
 
@@ -37,11 +37,7 @@ playButton.addEventListener('click', function () {
     const playerRoll = rollDice();
     const cpuRoll = rollDice();
 
-    console.log('Player roll: ' + playerRoll);
-    console.log('Cpu roll: ' + cpuRoll);
-
     // show dices on screen
-
     playerDices[playerRoll - 1].style.display = 'block';
     cpuDices[cpuRoll - 1].style.display = 'block';
 
@@ -65,21 +61,18 @@ playButton.addEventListener('click', function () {
     displayResult.innerText = message;
 
     printScores();
-
-    console.log(message);
-    console.log('--------------------------')
 })
-
-
-
 
 //function to generate rnd numbers
 function rollDice() {
+
     return Math.floor(Math.random() * 6 + 1);
 }
 
 function hideDices() {
+
     for (let i = 0; i < 6; i++) {
+
         playerDices[i].style.display = 'none';
         cpuDices[i].style.display = 'none';
     }
@@ -89,6 +82,7 @@ function hideDices() {
 }
 
 function printScores() {
+
     elementPlayerScore.innerText = playerScore;
     elementCpuScore.innerText = cpuScore;
 }
