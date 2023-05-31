@@ -24,17 +24,15 @@
     <!-- Exercise made by
     CARLO EUSEBI -->
     <div class="container">
-        <div class="row row g-3 justify-content-center text-center align-items-center my-5">
+        <div class="row row g-3 justify-content-center text-center my-5">
             <!-- email input -->
-            <div class="col-12 col-md-2">
-                <label for="user-email" class="form-label">Enter email</label>
-            </div>
             <div class="col-12 col-md-6">
                 <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
-                    <input type="email" class="form-control" id="user-email"
-                        placeholder="carloeusebi@boolean.it is a valid email ;-D">
-                    <div class="invalid-feedback" id="email-error-message"></div>
+                    <input type="email" class="form-control" id="user-email" value="carloeusebi@boolean.it">
+                    <div class="invalid-feedback text-start ps-5" id="email-error-message">You must insert an email
+                        address
+                    </div>
                 </div>
             </div>
             <!-- button -->
