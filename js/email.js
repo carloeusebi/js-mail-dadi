@@ -23,8 +23,11 @@ emailButton.addEventListener('click', function () {
 
     // validation
     if (!userEmail) {
+
         emailElement.classList.add('is-invalid');
         emailError.style.display = 'block';
+        diceGameSection.classList.add('d-none');
+
         return;
     }
 
