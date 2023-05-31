@@ -6,28 +6,42 @@ function rollDice() {
 const playButton = document.getElementById('play-button');
 const displayResult = document.getElementById('result-message');
 
+//grab all DOM dices
+const playerDices = document.getElementsByClassName('player-dice');
+const cpuDices = document.getElementsByClassName('cpu-dice');
+
 playButton.addEventListener('click', function () {
+
+    //hide previous rolls
+    for (let i = 0; i < 6; i++) {
+        playerDices[i].style.display = 'none';
+        cpuDices[i].style.display = 'none';
+    }
+
+
     // throw dice for player and cpu
-    const playerDice = rollDice();
-    const cpuDice = rollDice();
+    const playerRoll = rollDice();
+    const cpuRoll = rollDice();
 
-    console.log('Player roll: ' + playerDice);
-    console.log('Cpu roll: ' + cpuDice);
+    console.log('Player roll: ' + playerRoll);
+    console.log('Cpu roll: ' + cpuRoll);
 
-    let message = '';
+    playerDices[playerRoll - 1].style.display = 'block';
+    cpuDices[cpuRoll - 1].style.display = 'block';
 
-    if (playerDice > cpuDice) {
+    let message = 'DRAW!!';
+
+    if (playerRoll > cpuRoll) {
 
         message = 'Player Wins!!';
 
-    } else if (playerDice < cpuDice) {
+    } else if (playerRoll < cpuRoll) {
 
         message = 'CPU Wins!!';
 
-    } else {
-
-        message = "DRAW!!"
     }
+
+    displayResult.innerText = message;
 
     console.log(message);
     console.log('--------------------------')
