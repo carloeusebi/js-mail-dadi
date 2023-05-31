@@ -11,7 +11,7 @@
     <!-- bootstrap -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css'
         integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=='
-        crossorigin='anonymous' />
+        crossorigin='anonymous'>
     <!-- styles.css -->
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
     <!-- javascript -->
@@ -23,7 +23,26 @@
 
     <!-- Exercise made by
     CARLO EUSEBI -->
-
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-3 align-items-center my-5">
+            <!-- email input -->
+            <div class="col text-end px-5">
+                <label for="user-email" class="form-label text-end">Enter email</label>
+            </div>
+            <div class="col">
+                <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="email" class="form-control" id="user-email"
+                        placeholder="carloeusebi@boolean.it is a valid email ;-D">
+                    <div class="invalid-feedback" id="email-error-message"></div>
+                </div>
+            </div>
+            <!-- button -->
+            <div class="col px-5">
+                <button type="button" class="btn btn-primary" id="btn-email">Verifica</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
