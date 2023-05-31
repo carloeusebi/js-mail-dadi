@@ -38,7 +38,7 @@
     1. **ON _PLAY_ BUTTON PRESS**;
         1. generate an rnd number for the user;
         1. generate an rnd number for the cpu;
-        1. display user and cpu throws on screen;
+        1. display user and cpu rolls on screen;
         1. **IF** user score is higher:
             - display 'player wins' message;
         **ELSE IF** cpu score is higher:
