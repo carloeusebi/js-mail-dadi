@@ -13,5 +13,22 @@ playButton.addEventListener('click', function () {
 
     console.log('Player roll: ' + playerDice);
     console.log('Cpu roll: ' + cpuDice);
+
+    let message = '';
+
+    if (playerDice > cpuDice) {
+
+        message = 'Player Wins!!';
+
+    } else if (playerDice < cpuDice) {
+
+        message = 'CPU Wins!!';
+
+    } else {
+
+        message = "DRAW!!"
+    }
+
+    console.log(message);
     console.log('--------------------------')
 })
