@@ -4,7 +4,7 @@ const emailButton = document.getElementById('btn-email');
 const emailError = document.getElementById('email-error-message');
 const emailInvalid = document.getElementById('email-invalid-alert');
 
-const playButton = document.getElementById('play-button');
+const diceGameSection = document.getElementById('dice-game');
 
 // create allowed emails array
 const allowedEmails = ['carloeusebi@boolean.it',
@@ -54,11 +54,11 @@ emailButton.addEventListener('click', function () {
     // otherwise show the 'not authorized' alert and hide the button if it was on display
     if (isAllowed) {
 
-        playButton.classList.remove('d-none');
+        diceGameSection.classList.remove('d-none');
 
     } else {
 
-        playButton.classList.add('d-none');
+        diceGameSection.classList.add('d-none');
         emailInvalid.classList.remove('d-none');
 
     }
