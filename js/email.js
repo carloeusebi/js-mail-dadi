@@ -27,7 +27,6 @@ emailButton.addEventListener('click', function () {
     if (!userEmail) {
         emailElement.classList.add('is-invalid');
         emailError.style.display = 'block';
-        playButton.classList.add('d-none');
         return;
     }
 
