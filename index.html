@@ -8,6 +8,10 @@
     <meta name="author" content="Carlo Eusebi">
     <title>Dices</title>
     <link rel="icon" type="icon/png" href="img/icon.png">
+    <!-- fontawesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+        integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=='
+        crossorigin='anonymous' />
     <!-- bootstrap -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css'
         integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=='
@@ -24,6 +28,7 @@
     <!-- Exercise made by
     CARLO EUSEBI -->
     <div class="container">
+        <h1 class="my-5 text-center">Login to play dice versus the CPU</h1>
         <div class="row row g-3 justify-content-center text-center my-5">
             <!-- email input -->
             <div class="col-12 col-md-6">
@@ -41,12 +46,24 @@
             </div>
 
         </div>
+
+        <!-- not allowed email address alert -->
         <div class="row justify-content-center">
-            <div class="d-none col-10 col-md-6 alert alert-danger alert-dismissible fade show" id="email-invalid-alert">
+            <div class="d-none col-10 col-md-8 alert alert-danger alert-dismissible fade show" id="email-invalid-alert">
                 <strong>Hoops!</strong> It looks like you are not authorized to play!!
-                <button type="button" class="btn-close" id="alert-button"></button>
             </div>
         </div>
+
+        <!-- play button -->
+        <div class="d-flex justify-content-center my-5">
+            <button id="play-button" class="d-none btn btn-success px-5">
+                <i class="fa-solid fa-play"></i>
+                PLAY!
+            </button>
+        </div>
+
+
+
 
     </div>
 </body>
