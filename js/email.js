@@ -26,4 +26,12 @@ emailButton.addEventListener('click', function () {
         emailError.style.display = 'block';
         return;
     }
+
+    let isAllowed;
+
+    for (let i = 0; !isAllowed && i < allowedEmails.length; i++) {
+        if (userEmail === allowedEmails[i]) isAllowed = true;
+        console.log(i);
+        console.log(isAllowed);
+    }
 })
