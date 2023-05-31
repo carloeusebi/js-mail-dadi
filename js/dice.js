@@ -1,6 +1,13 @@
 const playButton = document.getElementById('play-button');
 const displayResult = document.getElementById('result-message');
 
+// score variables
+const elementPlayerScore = document.getElementById('player-score');
+const elementCpuScore = document.getElementById('cpu-score');
+
+let playerScore = 0;
+let cpuScore = 0;
+
 //grab all DOM dices
 const playerDices = document.getElementsByClassName('player-dice');
 const cpuDices = document.getElementsByClassName('cpu-dice');
@@ -17,22 +24,31 @@ playButton.addEventListener('click', function () {
     console.log('Player roll: ' + playerRoll);
     console.log('Cpu roll: ' + cpuRoll);
 
+    // show dices on screen
+
     playerDices[playerRoll - 1].style.display = 'block';
     cpuDices[cpuRoll - 1].style.display = 'block';
+
+    //comparison
 
     let message = 'DRAW!!';
 
     if (playerRoll > cpuRoll) {
 
         message = 'Player Wins!!';
+        playerScore++;
 
     } else if (playerRoll < cpuRoll) {
 
         message = 'CPU Wins!!';
+        cpuScore++;
 
     }
 
+    //result outputs
     displayResult.innerText = message;
+    elementPlayerScore.innerText = playerScore;
+    elementCpuScore.innerText = cpuScore;
 
     console.log(message);
     console.log('--------------------------')
