@@ -1,3 +1,7 @@
+#dice-game .btn {
+    width: 200px;
+}
+
 .score {
     margin-bottom: 150px;
 }
