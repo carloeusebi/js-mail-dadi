@@ -16,9 +16,10 @@ const cpuDices = document.getElementsByClassName('cpu-dice');
 
 // RESET BUTTON
 resetButton.addEventListener('click', function () {
-
+    
     //hide previous rolls
     hideDices();
+    displayResult.innerText = '';
 
     playerScore = cpuScore = 0;
 
@@ -76,9 +77,6 @@ function hideDices() {
         playerDices[i].style.display = 'none';
         cpuDices[i].style.display = 'none';
     }
-
-    displayResult.innerText = '';
-
 }
 
 function printScores() {
