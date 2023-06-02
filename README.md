@@ -41,9 +41,9 @@
         1. display user and cpu rolls on screen;
         1. **IF** user score is higher:
             - display 'player wins' message;
-        **ELSE IF** cpu score is higher:
+        - **ELSE IF** cpu score is higher:
             - display 'cpu wins' message;
-        **ELSE** => it is a draw;
+        - **ELSE** => it is a draw;
             - display 'draw' message;
 
         
