@@ -67,6 +67,9 @@ emailButton.addEventListener('click', function () {
 
 })
 
+/**
+ *  clears all validation errors
+*/
 function clearErrors() {
 
     // clear all errors

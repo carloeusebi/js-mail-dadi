@@ -63,11 +63,18 @@ playButton.addEventListener('click', function () {
     printScores();
 })
 
-//function to generate rnd numbers
+/**
+ * returns a random number between 1 and 6, representing a dice roll
+ * @returns {number} a random numbert between 1 and 6
+ */
 function rollDice() {
 
     return Math.floor(Math.random() * 6 + 1);
 }
+
+/**
+ * hides every dice on screen
+ */
 
 function hideDices() {
 
@@ -80,6 +87,10 @@ function hideDices() {
     displayResult.innerText = '';
 
 }
+
+/**
+ * updates player and cpu scores on screen
+ */
 
 function printScores() {
 
